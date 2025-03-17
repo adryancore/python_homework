@@ -178,11 +178,18 @@ def pig_latin(sentence):
         elif word[:2] == "qu": 
             result.append(word[2:] + "quay")
         else:
+            prefix = ""
+            suffix = ""
             for i, letter in enumerate(word):
-                if letter in vowels:
-                    result.append(word[i:] + word[:i] + "ay")
-    
+                if word[i] in vowels:
+                    prefix = word[i:]
+                    suffix += "ay"
+                    break
+                else:
+                    suffix += word[i]                
+            result.append(prefix + suffix)
+
     return " ".join(result)
 
-sentence = "I barely understand pig latin as it is this is a horrible example for my nuerodivergent brain."
+sentence = "I don't quite understand pig latin as it is this is a horrible example for my nuerodivergent brain"
 print(pig_latin(sentence))
