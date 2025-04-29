@@ -2,7 +2,7 @@
 
 import sqlite3
 
-with  sqlite3.connect("../db/magazines.db") as conn:
+with sqlite3.connect("../db/magazines.db") as conn:
     print("Database created and connected successfully!")
 
 # Task 2: Define Database Structure
