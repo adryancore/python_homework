@@ -1,32 +1,32 @@
 import sqlite3
 
-def fetch_order_totals():
-    # Connect to the SQLite database
-    conn = sqlite3.connect('/path/to/your/database.db')
+def employees_with_many_orders():
+    conn = sqlite3.connect('../db/lesson.db')
     cursor = conn.cursor()
 
-    # Define the SQL query
-    query = '''
-    SELECT o.order_id, 
-           SUM(p.price * li.quantity) AS total_price
-    FROM orders o
-    JOIN line_items li ON o.order_id = li.order_id
-    JOIN products p ON li.product_id = p.product_id
-    GROUP BY o.order_id
-    ORDER BY o.order_id
-    LIMIT 5;
-    '''
+    try:
+        query = '''
+        SELECT e.employee_id, e.first_name, e.last_name, COUNT(o.order_id) AS order_count
+        FROM employees e
+        JOIN orders o ON e.employee_id = o.employee_id
+        GROUP BY e.employee_id
+        HAVING COUNT(o.order_id) > 5
+        ORDER BY order_count DESC;
+        '''
 
-    # Execute the query
-    cursor.execute(query)
+        cursor.execute(query)
+        results = cursor.fetchall()
 
-    # Fetch and display the results
-    results = cursor.fetchall()
-    for row in results:
-        print(f"Order ID: {row[0]}, Total Price: ${row[1]:.2f}")
+        print("Employees with more than 5 orders:")
+        for row in results:
+            print(f"Employee ID: {row[0]}, Name: {row[1]} {row[2]}, Order Count: {row[3]}")
 
-    # Close the connection
-    conn.close()
+    except Exception as e:
+        print("An error occurred:", e)
+
+    finally:
+        conn.close()
 
 if __name__ == '__main__':
-    fetch_order_totals()
+    employees_with_many_orders()
+
