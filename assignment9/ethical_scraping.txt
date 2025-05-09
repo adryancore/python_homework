@@ -1,0 +1,13 @@
+According to its robots.txt file, Wikipedia specifies the rules for web crawlers (bots) that visit the site.
+
+    Disallowed Bots: Many bots, particularly those known for spamming or behaving irresponsibly, are disallowed from crawling Wikipedia. This includes bots like MJ12bot, Mediapartners-Google*, HTTrack, and others that are known to overload the server or disregard the rules.
+
+    Allowed Bots: Wikipedia allows certain bots that comply with the site's rules, such as the mobile and API bots. These bots can access specific parts of the site (e.g., API endpoints) but are restricted from accessing pages that are dynamically generated or certain special pages.
+
+    Crawl-delay: Some bots, like Inktomi's "Slurp," are encouraged to use a delay between requests to avoid overwhelming the server.
+
+    Disallowed Paths: Many pages and sections, such as administrative pages (e.g., deletion discussions, user blocks), are blocked from being crawled by all bots.
+
+    Localized Rules: Some disallow rules apply to specific language versions of Wikipedia (e.g., ar, dewiki, eswiki, etc.), with different paths or pages disallowed based on their content.
+
+This file ensures that Wikipedia is crawled in a responsible manner without overloading the server, while also limiting access to certain content that may not be relevant or beneficial for search engines or other automated systems.

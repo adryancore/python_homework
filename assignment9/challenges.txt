@@ -1,0 +1,11 @@
+Challenge:
+
+I wrote the code to create owasp_top_10.csv. 
+
+Even in my terminal, the code specified: "Checking if CSV path exists: True / Data written to owasp_top_10.csv."
+
+However, owasp_top_10.csv wasn't actually being created in my Explorer panel in VS Code nor could I find it in Finder on my Mac hard drive within the working directory.
+
+Resolution:
+
+I booked mentor time with JD to resolve the issue. Ta-dah! The file was actually in the root directory, but not in assignment9; this issue has since been fixed, as you can see.
