@@ -1,0 +1,45 @@
+function: greet
+positional parameters: none
+keyword parameters: none
+return: None
+----------------------------------------
+function: check_args
+positional parameters: (1, 2, 3, 'banana')
+keyword parameters: none
+return: True
+----------------------------------------
+function: return_logger
+positional parameters: none
+keyword parameters: {'name': 'Adryan', 'mood': 'tired', 'debugging': True}
+return: <function logger_decorator at 0x10050b9c0>
+----------------------------------------
+function: greet
+positional parameters: none
+keyword parameters: none
+return: None
+----------------------------------------
+function: check_args
+positional parameters: (1, 2, 3, 'banana')
+keyword parameters: none
+return: True
+----------------------------------------
+function: return_logger
+positional parameters: none
+keyword parameters: {'name': 'Adryan', 'mood': 'tired', 'debugging': True}
+return: <function logger_decorator at 0x102d1dee0>
+----------------------------------------
+function: greet
+positional parameters: none
+keyword parameters: none
+return: None
+----------------------------------------
+function: check_args
+positional parameters: (1, 2, 3, 'banana')
+keyword parameters: none
+return: True
+----------------------------------------
+function: return_logger
+positional parameters: none
+keyword parameters: {'name': 'Adryan', 'mood': 'tired', 'debugging': True}
+return: <function logger_decorator at 0x1028bdee0>
+----------------------------------------
